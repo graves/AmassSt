@@ -1,5 +1,5 @@
 Class {
-	#name : #EnumResult,
+	#name : #AmassEnumResult,
 	#superclass : #Object,
 	#instVars : [
 		'contents'
@@ -11,7 +11,7 @@ Class {
 }
 
 { #category : #accessing }
-EnumResult class >> fromOutput: aByteString [
+AmassEnumResult class >> fromOutput: aByteString [
 	| enumResult |
 	
 	enumResult := self new.
@@ -21,11 +21,11 @@ EnumResult class >> fromOutput: aByteString [
 ]
 
 { #category : #accessing }
-EnumResult >> contents: aCollection [
+AmassEnumResult >> contents: aCollection [
 	contents := aCollection
 ]
 
 { #category : #accessing }
-EnumResult >> domains [
+AmassEnumResult >> domains [
 	^ contents keys
 ]

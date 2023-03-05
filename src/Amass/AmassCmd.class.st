@@ -33,7 +33,7 @@ AmassCmd >> enumDomain: aByteString [
 		]
 		onExitDo: [ :process :outStream :errStream  |
 			process closeAndCleanStreams.
-			result := (EnumResult fromOutput: stdout contents).
+			result := (AmassEnumResult fromOutput: stdout contents).
 			]
 	] fork.
 	
